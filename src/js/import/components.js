@@ -1,0 +1,1 @@
+@@include("../../blocks/components/fabrication/fabrication.js")

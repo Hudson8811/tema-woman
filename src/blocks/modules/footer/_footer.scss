@@ -1,0 +1,32 @@
+.footer {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+	background: #F2F5FF;
+	padding: vw(32) vw(32) vw(28) vw(110);
+	@include max(sm) {
+		padding: vw2(32) vw2(32) vw2(28) vw2(35);
+	}
+	&__text {
+		position: relative;
+		width: 100%;
+		display: inline-block;
+		color: #163686;
+		font-size: vw(21);
+		font-style: normal;
+		font-weight: 300;
+		line-height: vw(27); /* 128.571% */
+		text-transform: uppercase;
+		max-width: vw(1605);
+		@include max(sm) {
+			color: #163686;
+			font-size: vw2(17);
+			font-style: normal;
+			font-weight: 300;
+			line-height: vw2(24); /* 141.176% */
+			text-transform: uppercase;
+		}
+	}
+}

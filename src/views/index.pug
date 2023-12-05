@@ -1,0 +1,167 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+	- const title = "Project title"
+
+block content
+	.section.main__section
+		.section.love-spb__section
+			.love-spb
+				.love-spb__desc
+					.love-spb__title.title__96
+						!="За что мы любим<br> <span>Санкт-Петербург?</span>"
+					.love-spb__subtitle.title__48
+						!="КОНКУРС ПРИЗНАНИЙ В ЛЮБВИ <br>СЕВЕРНОЙ СТОЛИЦЕ"
+					.love-spb__text.text__28 
+						!="Быть родителем в Санкт-Петербурге — большая удача. Богатая культура и искусство окружают малыша буквально с рождения.<b> Санкт-Петербург — город, в котором в 1997 году появился бренд детского питания «Тёма», ставший любимым для мам и малышей.</b> Вместе с «Тёмой» собрали причины, по которым мы любим Северную столицу, и предлагаем вам тоже признаться в любви родному городу и получить шанс выиграть приз"
+				.love-spb__contest-label 
+					img(src="img/love-spb__contest-label.png", alt="")
+					.love-spb__contest-label__inside
+						img(src="img/love-spb__contest-label__inside__1.png", alt="")
+		.section.spb-slider__section
+			.spb-slider
+				.spb-slider__title.title__72 Любим за...
+				include ../blocks/components/clients__slider/clients__slider
+		
+		.partners
+			.partners__slider.swiper-container.js-partners__slider
+				.swiper-wrapper
+					.partners__slide.swiper-slide
+						.partners__slide__picture
+							img(src="img/partners__slide__1.png", alt="")
+						.partners__slide__text 
+							!="Любим поколениями мам, бабушек и малышей более 25 лет!"
+					.partners__slide.swiper-slide
+						.partners__slide__picture
+							img(src="img/partners__slide__1.png", alt="")
+						.partners__slide__text 
+							!="Любим поколениями мам, бабушек и малышей более 25 лет!"
+					.partners__slide.swiper-slide
+						.partners__slide__picture
+							img(src="img/partners__slide__1.png", alt="")
+						.partners__slide__text 
+							!="Любим поколениями мам, бабушек и малышей более 25 лет!"
+					.partners__slide.swiper-slide
+						.partners__slide__picture
+							img(src="img/partners__slide__1.png", alt="")
+						.partners__slide__text 
+							!="Любим поколениями мам, бабушек и малышей более 25 лет!"
+					.partners__slide.swiper-slide
+						.partners__slide__picture
+							img(src="img/partners__slide__1.png", alt="")
+						.partners__slide__text 
+							!="Любим поколениями мам, бабушек и малышей более 25 лет!"
+					.partners__slide.swiper-slide
+						.partners__slide__picture
+							img(src="img/partners__slide__1.png", alt="")
+						.partners__slide__text 
+							!="Любим поколениями мам, бабушек и малышей более 25 лет!"
+					.partners__slide.swiper-slide
+						.partners__slide__picture
+							img(src="img/partners__slide__1.png", alt="")
+						.partners__slide__text 
+							!="Любим поколениями мам, бабушек и малышей более 25 лет!"
+					.partners__slide.swiper-slide
+						.partners__slide__picture
+							img(src="img/partners__slide__1.png", alt="")
+						.partners__slide__text 
+							!="Любим поколениями мам, бабушек и малышей более 25 лет!"
+		
+		
+		.section.rules__section
+			.rules
+				.rules__top
+					.rules__title 
+						!="получите шанс выиграть «Говорящую Ферму» от"
+					.rules__label 
+						img(src="img/rules__label.png", alt="")
+				.rules__list 
+					.rule
+						.rule__num 1
+						.rule__text 
+							!="Выберите шаблон<br>открытки"
+					.rule
+						.rule__num 2
+						.rule__text
+							!="Напишете на открытке, <br> за что вы любите<br>Санкт-Петербург"
+					.rule
+						.rule__num 3
+						.rule__text
+							!="Нажмите на кнопку <br> «Отправить на конкурс»<br> и оставьте ваш email"
+				.rules-prisez 
+					.rules-prisez__bg 
+						picture 
+							source(media="(max-width: 697px )", srcset="img/rules-prisez__bg--mob.png")
+							img(src="img/rules-prisez__bg.png", alt="")
+					.rules-prisez__label
+						img(src="img/rules-prisez__label.png", alt="")
+					.rules-prisez__text.text__28
+						!="30 авторов самых интересных, по мнению жюри конкурса, признаний в любви Северной столице, получат Говорящую ферму от Сhicco."
+				.promo-code
+					.promo-code__text.text__28
+						!='По промокоду <span>CHICCOTEMA</span> скидка  на 10% на весь ассортимент <br> магазина Сhicco Recaro Official Store На <a href="#">Озон</a> <span class="small">Скидка действует до 31.12.2023</span>'
+				.promo-code__desc
+					.promo-code__desc__col
+						.promo-code__circle
+							.promo-code__circle__title подарок для всех
+							.promo-code__circle__promo ТЕМА20
+							.promo-code__circle__text промокод
+					.promo-code__desc__col
+						.promo-code__desc__text 
+							!='<b>скидка 20% </b> на покупку любых продуктов <span>Тёма</span><br> на сумму от 200 рублей в <a href="#">Самокате</a> до 31.12.2023'
+				
+						.promo-code__desc__text 
+							!='<b>скидка 20% </b> на покупку любых продуктов <span>Тёма</span><br> на сумму от 200 рублей в <a href="#">СберМаркете</a> до 07.01.2024'
+		
+		.section.postcard__section
+			.postcard
+				.postcard__col
+					.postcard-slider
+						.postcard__slider__title.title__48 Выберите открытку
+						.postcard__slider__wrap
+							.swiper-container.postcard__slider.js-postcard__slider
+								.swiper-wrapper
+									.postcard__slide.swiper-slide.js-postcard__theme
+										img(src="img/postcard__slide__1.png", alt="")
+								
+									.postcard__slide.swiper-slide.js-postcard__theme
+										img(src="img/postcard__slide__2.png", alt="")
+								
+									.postcard__slide.swiper-slide.js-postcard__theme
+										img(src="img/postcard__slide__3.png", alt="")
+								
+								
+							.swiper-buttons
+								.swiper-button-prev.postcard-button-prev
+									<svg width="34" height="14" viewBox="0 0 34 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M33.7081 7H2.11801" stroke="#5A6F8B" stroke-width="2"/>
+									<path d="M8.44098 12.8633L2.118 6.99998L8.44098 1.12421" stroke="#5A6F8B" stroke-width="2"/>
+									</svg>
+								.swiper-button-next.postcard-button-next
+									<svg width="34" height="14" viewBox="0 0 34 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0.291931 7H31.882" stroke="#5A6F8B" stroke-width="2"/>
+									<path d="M25.559 12.8633L31.882 6.99998L25.559 1.12421" stroke="#5A6F8B" stroke-width="2"/>
+									</svg>
+
+				.postcard__col
+					.postcard__inter
+						.postcard__inter__title.title__48 
+							!="Напишите, за что <br> любите Санкт-Петербург"
+						form.contacts__form
+							.contacts__form__input-block
+								textarea(name="", cols="30", rows="10" ).contacts__form__textarea
+								.contacts__form__input-block__name Я люблю Санкт-Петербург за...
+								.contacts__form__input-block__error Неправильное cообщение
+						.btn.postcard__inter__btn сохранить
+		.section.gallery__section
+			.gallery
+				.gallery__title
+					!="галерея участников"
+				.gallery__list
+					.gallery__item
+						img(src="img/gallery__item__1.png", alt="")
+					.gallery__item
+						img(src="img/gallery__item__2.png", alt="")
+					.gallery__item
+						img(src="img/gallery__item__3.png", alt="")
