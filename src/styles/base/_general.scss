@@ -50,7 +50,7 @@ body {
 	flex: 1 0 auto;
     padding-top: vw(91);
     overflow: hidden;
-    width: 100vw;
+    width: 100%;
     @include max(md) {
         padding-top: vw2(51);
     }
@@ -228,11 +228,15 @@ body {
     transition: all 0.5s;
     white-space: nowrap;
     cursor: pointer;
-    @include max(md) {
+    @include max(sm) {
         border-radius: vw2(250);
-        font-size: vw2(20);
-        letter-spacing: vw2(0.325);
-        min-height: vw2(49);
+        font-size: vw2(28);
+        font-style: normal;
+        font-weight: 400;
+        line-height: vw2(33); /* 117.857% */
+        text-transform: uppercase;
+        min-height: vw2(78);
+        min-width: vw2(311);
         padding: vw2(10) vw2(20);
     }
     &:hover {
@@ -391,15 +395,15 @@ body {
 }
 .title__72 {
     color: $blue;
-    font-size: 72px;
+    font-size: vw(72);
     font-style: normal;
     font-weight: 700;
-    line-height: 112px; 
+    line-height: vw(112); 
     @include max(sm) {
-        font-size: 48px;
+        font-size: vw(48);
         font-style: normal;
         font-weight: 700;
-        line-height: 112px;
+        line-height: vw(112);
     }
 }
 .title__48 {

@@ -2222,7 +2222,7 @@ body {
   flex: 1 0 auto;
   padding-top: 4.7395833333vw;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
 }
 
 .site-footer {
@@ -2470,10 +2470,10 @@ body {
 
 .title__72 {
   color: #2879B1;
-  font-size: 72px;
+  font-size: 3.75vw;
   font-style: normal;
   font-weight: 700;
-  line-height: 112px;
+  line-height: 5.8333333333vw;
 }
 
 .title__48 {
@@ -3556,14 +3556,6 @@ body {
     min-height: 1.387374462vw;
   }
 
-  .btn {
-    border-radius: 35.8680057389vw;
-    font-size: 2.8694404591vw;
-    letter-spacing: 0.0466284075vw;
-    min-height: 7.0301291248vw;
-    padding: 1.4347202296vw 2.8694404591vw;
-  }
-
   .link {
     font-size: 2.8694404591vw;
     font-style: normal;
@@ -3592,6 +3584,19 @@ body {
 }
 
 @media only screen and (max-width: 697px) {
+  .btn {
+    border-radius: 35.8680057389vw;
+    font-size: 4.0172166428vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 4.7345767575vw;
+    /* 117.857% */
+    text-transform: uppercase;
+    min-height: 11.1908177905vw;
+    min-width: 44.6197991392vw;
+    padding: 1.4347202296vw 2.8694404591vw;
+  }
+
   .title__96 {
     font-size: 6.8866571019vw;
     font-style: normal;
@@ -3602,10 +3607,10 @@ body {
   }
 
   .title__72 {
-    font-size: 48px;
+    font-size: 2.5vw;
     font-style: normal;
     font-weight: 700;
-    line-height: 112px;
+    line-height: 5.8333333333vw;
   }
 
   .title__48 {
