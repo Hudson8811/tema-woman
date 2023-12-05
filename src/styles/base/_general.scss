@@ -400,10 +400,10 @@ body {
     font-weight: 700;
     line-height: vw(112); 
     @include max(sm) {
-        font-size: vw(48);
+        font-size: vw2(48);
         font-style: normal;
         font-weight: 700;
-        line-height: vw(112);
+        line-height: vw2(112);
     }
 }
 .title__48 {
