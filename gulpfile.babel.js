@@ -15,6 +15,15 @@ const requireDir = require("require-dir"),
                 "./src/views/**/*.pug"
             ]
         },
+        pdf: {
+            src: [
+                "./src/documents/*.{json,pdf}",
+            ],
+            dist: "./dist/documents",
+            watch: [
+                "./src/documents/*.{json,pdf}"
+            ]
+        },
         styles: {
             src: "./src/styles/main.{scss,sass}",
             dist: "./dist/styles/",
@@ -64,10 +73,10 @@ requireDir("./gulp-tasks/");
 export { paths };
 
 export const development = gulp.series("clean",
-    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons"]),
+    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons", "pdf"]),
     gulp.parallel("serve"));
 
 export const prod = gulp.series("clean",
-    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons", "gzip"]));
+    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons", "gzip", "pdf"]));
 
 export default development;

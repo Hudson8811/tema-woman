@@ -68,5 +68,57 @@ jQuery(function () {
 		}
 	});
 
+	let postcardNum = document.querySelector(".js-postcard__theme.swiper-slide-active");
+	let message = document.getElementById("js-contacts__form__textarea");
+	let postcardLink = document.getElementById("js-download");
+	let messageValue;
+	let interBtn = document.querySelector(".postcard__inter__btn");
+	
+	message.addEventListener('input', function handleChange(event) {
+		messageValue = event.target.value;
+	});
+	interBtn.addEventListener('click', ()=> {
+		console.log(postcardLink)
+		// postcardLink.href = messageValue;
+		// postcardLink.appendChild(messageValue);
+		$.ajax({
+			type: "POST",
+			url: "http://localhost:4000/documents/text.json",
+			data: { postcard : postcardNum, text: messageValue, link: ""},
+			success: function(data) {
+				// alert(data);
+				// console.log(postcardLink)
+					//ответ от сервера
+					var parse = JSON.parse(data);
+					var linkValue = parse.link;
 
+					// console.log(postcardLink)
+					if (linkValue != '' && linkValue != undefined){
+						postcardLink.href = linkValue;
+						postcardLink.click();
+					}
+			}
+		});
+		// $.ajax({
+		// 	type: "get",
+		// 	url: "http://localhost:4000/documents/text.json",
+		// 	data: { postcard : postcardNum, text: messageValue, link: ""},
+		// 	success: function(data) {
+		// 		// alert(data);
+		// 		// console.log(postcardLink)
+		// 			//ответ от сервера
+		// 			var parse = JSON.parse(data);
+		// 			var linkValue = parse.link;
+
+		// 			// console.log(postcardLink)
+		// 			if (linkValue != '' && linkValue != undefined){
+		// 				postcardLink.href = linkValue;
+		// 				postcardLink.click();
+		// 			}
+		// 	}
+		// });
+
+	})
+	
+	
 });

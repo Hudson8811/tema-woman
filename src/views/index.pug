@@ -152,10 +152,12 @@ block content
 							!="Напишите, за что <br> любите Санкт-Петербург"
 						form.contacts__form
 							.contacts__form__input-block
-								textarea(name="", cols="30", rows="10" ).contacts__form__textarea
+								textarea(name="", cols="30", rows="10" ).contacts__form__textarea#js-contacts__form__textarea
 								.contacts__form__input-block__name Я люблю Санкт-Петербург за...
 								.contacts__form__input-block__error Неправильное cообщение
 						.btn.postcard__inter__btn сохранить
+						a(download="" href="img/postcard__slide__2.png" title="ImageName").btn#js-download тестовая кнопка
+		
 		.section.gallery__section
 			.gallery
 				.gallery__title
