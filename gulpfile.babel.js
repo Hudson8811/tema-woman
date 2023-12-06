@@ -17,11 +17,11 @@ const requireDir = require("require-dir"),
         },
         pdf: {
             src: [
-                "./src/documents/*.{json,pdf}",
+                "./src/documents/*.*",
             ],
             dist: "./dist/documents",
             watch: [
-                "./src/documents/*.{json,pdf}"
+                "./src/documents/*.*"
             ]
         },
         styles: {

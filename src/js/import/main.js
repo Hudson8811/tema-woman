@@ -21,7 +21,7 @@ jQuery(function () {
 	var postcardSlider
 	$('.js-postcard__slider').each(function(){
 		var slider=$(this)
-		var postcardSlider = new Swiper(slider[0], {
+		postcardSlider = new Swiper(slider[0], {
 			// watchOverflow: true,
 			// watchSlidesVisibility: true,
 			// watchSlidesProgress: true,
@@ -68,57 +68,86 @@ jQuery(function () {
 		}
 	});
 
-	let postcardNum = document.querySelector(".js-postcard__theme.swiper-slide-active");
 	let message = document.getElementById("js-contacts__form__textarea");
-	let postcardLink = document.getElementById("js-download");
-	let messageValue;
-	let interBtn = document.querySelector(".postcard__inter__btn");
-	
-	message.addEventListener('input', function handleChange(event) {
-		messageValue = event.target.value;
+
+	$(document).on('click', '.postcard__inter__btn', function () {
+	    let btn = $(this);
+        let msg = $('#js-contacts__form__textarea').val();
+        if (postcardSlider instanceof Swiper) {
+            let activeSlideIndex = postcardSlider.activeIndex;
+            
+            //ТЕСТОВЫЙ, удалить перед передачей заказчику.
+            $.ajax({
+                url: '/documents/text.html',
+                type: 'GET',
+                data: {
+                    postcard: activeSlideIndex,
+                    text: msg
+                },
+                beforeSend: function(xhr) {
+                    btn.attr('disabled',true);
+                },
+                success: function(response) {
+                    try {
+                        let parsedResponse = JSON.parse(response);
+                        if (parsedResponse.hasOwnProperty('link')){
+                            let imageLink = parsedResponse.link;
+                            let a = $('<a>').attr('href', imageLink).attr('download', imageLink.substring(imageLink.lastIndexOf('/') + 1));
+                            $('body').append(a);
+                            a[0].click();
+                            a.remove();
+                        }
+                    } catch (error) {
+                        console.log('Response is not valid JSON');
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log('Error:', errorThrown);
+                },
+                complete: function() {
+                    btn.attr('disabled', false);
+                }
+            });
+
+            //БОЕВОЙ, раскоменьтить и удалить тестовый. Удалить также тестовые файлы json
+            /*
+            $.ajax({
+                url: '/save_collage/',
+                type: 'POST',
+                data: {
+                    postcard: activeSlideIndex,
+                    text: msg
+                },
+                beforeSend: function(xhr) {
+                    btn.attr('disabled',true);
+                },
+                success: function(response) {
+                    try {
+                        let parsedResponse = JSON.parse(response);
+                        if (parsedResponse.hasOwnProperty('link')){
+                            let imageLink = parsedResponse.link;
+                            let a = $('<a>').attr('href', imageLink).attr('download', imageLink.substring(imageLink.lastIndexOf('/') + 1));
+                            $('body').append(a);
+                            a[0].click();
+                            a.remove();
+                        }
+                    } catch (error) {
+                        console.log('Response is not valid JSON');
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log('Error:', errorThrown);
+                },
+                complete: function() {
+                    btn.attr('disabled', false);
+                }
+            });
+            */
+        }
+
+
+
 	});
-	interBtn.addEventListener('click', ()=> {
-		console.log(postcardLink)
-		// postcardLink.href = messageValue;
-		// postcardLink.appendChild(messageValue);
-		$.ajax({
-			type: "POST",
-			url: "http://localhost:4000/documents/text.json",
-			data: { postcard : postcardNum, text: messageValue, link: ""},
-			success: function(data) {
-				// alert(data);
-				// console.log(postcardLink)
-					//ответ от сервера
-					var parse = JSON.parse(data);
-					var linkValue = parse.link;
-
-					// console.log(postcardLink)
-					if (linkValue != '' && linkValue != undefined){
-						postcardLink.href = linkValue;
-						postcardLink.click();
-					}
-			}
-		});
-		// $.ajax({
-		// 	type: "get",
-		// 	url: "http://localhost:4000/documents/text.json",
-		// 	data: { postcard : postcardNum, text: messageValue, link: ""},
-		// 	success: function(data) {
-		// 		// alert(data);
-		// 		// console.log(postcardLink)
-		// 			//ответ от сервера
-		// 			var parse = JSON.parse(data);
-		// 			var linkValue = parse.link;
-
-		// 			// console.log(postcardLink)
-		// 			if (linkValue != '' && linkValue != undefined){
-		// 				postcardLink.href = linkValue;
-		// 				postcardLink.click();
-		// 			}
-		// 	}
-		// });
-
-	})
 	
 	
 });
