@@ -107,9 +107,9 @@ jQuery(function () {
         let msg = $('#js-contacts__form__textarea').val();
         if (postcardSlider instanceof Swiper) {
             let activeSlideIndex = postcardSlider.activeIndex;
-            
-            //ТЕСТОВЫЙ, удалить перед передачей заказчику.
-            $.ajax({
+
+            //ТЕСТОВЫЙ
+           /* $.ajax({
                 url: '/documents/text.html',
                 type: 'GET',
                 data: {
@@ -139,10 +139,9 @@ jQuery(function () {
                 complete: function() {
                     btn.attr('disabled', false);
                 }
-            });
+            });*/
 
-            //БОЕВОЙ, раскоменьтить и удалить тестовый. Удалить также тестовые файлы json
-            /*
+            //БОЕВОЙ
             $.ajax({
                 url: '/save_collage/',
                 type: 'POST',
@@ -174,7 +173,6 @@ jQuery(function () {
                     btn.attr('disabled', false);
                 }
             });
-            */
         }
 
 
