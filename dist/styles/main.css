@@ -2837,6 +2837,8 @@ body {
   color: #163686;
   top: 10.4166666667vw;
   left: 25vw;
+  font-weight: 400;
+  z-index: 5;
 }
 
 .promo-code {
@@ -2984,6 +2986,17 @@ body {
   line-height: 1.25vw;
   /* 104.348% */
   text-transform: uppercase;
+}
+
+.promo-code__company {
+  color: #163686;
+  font-size: 1.0416666667vw;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.25vw;
+  position: absolute;
+  bottom: -1.8229166667vw;
+  right: -5.2083333333vw;
 }
 
 .postcard {
@@ -3361,6 +3374,7 @@ body {
   width: 100%;
   background: #F2F5FF;
   padding: 1.6666666667vw 1.6666666667vw 1.4583333333vw 5.7291666667vw;
+  margin-top: 5.7291666667vw;
 }
 
 .footer__text {
@@ -3504,7 +3518,7 @@ body {
   text-align: center;
   font-size: 1.09375vw;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.3541666667vw;
   margin-left: auto;
   margin-right: auto;
@@ -3644,7 +3658,7 @@ body {
   }
 
   .love-spb__subtitle {
-    margin-bottom: 2.8694404591vw;
+    margin-bottom: 5.7388809182vw;
   }
 
   .love-spb__text {
@@ -3735,7 +3749,7 @@ body {
   }
 
   .rules-prisez {
-    margin-bottom: 10.0430416069vw;
+    margin-bottom: 5.7388809182vw;
     flex-flow: column nowrap;
     width: 100%;
     min-height: auto;
@@ -3775,6 +3789,8 @@ body {
   }
 
   .promo-code {
+    flex-flow: column nowrap;
+    justify-content: center;
     margin-bottom: 5.0215208034vw;
   }
 
@@ -3808,7 +3824,7 @@ body {
   .promo-code__desc {
     margin-left: 0;
     flex-flow: column nowrap;
-    margin-bottom: 35.8680057389vw;
+    margin-bottom: 22.9555236729vw;
   }
 
   .promo-code__desc__col:nth-child(1) {
@@ -3866,6 +3882,18 @@ body {
     line-height: 3.4433285509vw;
   }
 
+  .promo-code__company {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    text-align: center;
+    width: 100%;
+    font-size: 2.8694404591vw;
+    font-style: normal;
+    line-height: 3.4433285509vw;
+    margin-top: 1.4347202296vw;
+  }
+
   .postcard {
     flex-flow: column nowrap;
     padding-left: 0;
@@ -3875,7 +3903,7 @@ body {
 
   .postcard__col:nth-child(1) {
     width: 100%;
-    margin-bottom: 5.4519368723vw;
+    margin-bottom: 6.456241033vw;
   }
 
   .postcard__col:nth-child(2) {
@@ -3921,14 +3949,15 @@ body {
   .postcard__slider__title {
     text-align: center;
     margin-bottom: 2.1520803443vw;
+    text-transform: none;
+    font-size: 5.7388809182vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 5.7388809182vw;
   }
 
   .postcard__slide {
     margin-bottom: 0;
-    background: #FFF;
-    padding: 0;
-    border-right: none;
-    border-bottom: none;
   }
 
   .postcard__inter {
@@ -3943,7 +3972,14 @@ body {
   }
 
   .postcard__inter__title {
+    color: #2879B1;
+    font-size: 6.8866571019vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 7.4605451937vw;
+    text-transform: none;
     margin-bottom: 4.3041606887vw;
+    margin-left: -0.8608321377vw;
   }
 
   .postcard__inter__btn {
@@ -4015,7 +4051,8 @@ body {
   }
 
   .footer {
-    padding: 4.5911047346vw 4.5911047346vw 4.0172166428vw 5.0215208034vw;
+    padding: 4.5911047346vw 3.156384505vw 4.8780487805vw 4.4476327116vw;
+    margin-top: 5.7388809182vw;
   }
 
   .footer__text {
@@ -4026,6 +4063,7 @@ body {
     line-height: 3.4433285509vw;
     /* 141.176% */
     text-transform: uppercase;
+    max-width: 100%;
   }
 
   .spb-slider {
@@ -4077,7 +4115,6 @@ body {
   .spb-slider .clients__slide__text {
     font-size: 2.0086083214vw;
     font-style: normal;
-    font-weight: 400;
     line-height: 1.2;
     width: 90vw;
     bottom: 4.7345767575vw;

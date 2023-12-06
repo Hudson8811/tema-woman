@@ -6,8 +6,10 @@
 	width: 100%;
 	background: #F2F5FF;
 	padding: vw(32) vw(32) vw(28) vw(110);
+	margin-top: vw(110);
 	@include max(sm) {
-		padding: vw2(32) vw2(32) vw2(28) vw2(35);
+		padding: vw2(32) vw2(22) vw2(34) vw2(31);
+		margin-top: vw2(40);
 	}
 	&__text {
 		position: relative;
@@ -27,6 +29,7 @@
 			font-weight: 300;
 			line-height: vw2(24); /* 141.176% */
 			text-transform: uppercase;
+			max-width: 100%;
 		}
 	}
 }
