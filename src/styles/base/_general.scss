@@ -544,9 +544,9 @@ body {
     }
     &__text {
         text-align: center;
-        max-width: vw(894);
+        max-width: vw(950);
         @include max(sm) {
-            max-width: vw2(606);
+            max-width: vw2(630);
         }
     }
     &__contest-label {
@@ -710,6 +710,24 @@ body {
             margin-left: 0;       
         }  
     }
+    &__subTitle {
+        position: absolute;
+        right: vw(-300);
+        bottom:vw(80);
+        display: inline-block;
+        color: #163686;
+        font-size: vw(20);
+        font-style: normal;
+        font-weight: 300;
+        line-height: vw(24);
+        @include max(sm) {
+            right: auto;
+            left: vw2(20);
+            bottom:vw2(-100);
+            font-size: vw2(20);
+            line-height: vw2(24);
+        }
+    }
     &__label {
         position: relative;
         width: vw(214);
@@ -734,7 +752,7 @@ body {
         align-items: flex-start;
         margin-bottom: vw(57);
         @include max(sm) {
-            margin-bottom: vw2(60);
+            margin-bottom: vw2(80);
         }
     }
     &__list {
@@ -824,7 +842,7 @@ body {
             margin-left: 0;
             padding-left: vw2(67);
             padding-right: vw2(27);
-            padding-top: vw2(37);
+            padding-top: vw2(20);
 
         }
         &__bg {
@@ -836,7 +854,7 @@ body {
             z-index: 1;
             @include max(sm) {
                 width: vw2(298);
-                top: vw2(-150);
+                top: vw2(-170);
                 left: auto;
                 right: vw2(95);
             }
@@ -881,6 +899,29 @@ body {
                 line-height: vw2(33);
             }
         }
+        &__subTitle {
+            position: absolute;
+            right: vw(20);
+            top: vw(55);
+            display: inline-block;
+            color: #163686;
+            font-size: vw(15);
+            font-style: italic;
+            font-weight: 300;
+            line-height: vw(24);
+            @include max(sm) {
+                position: relative;
+                right: auto;
+                top: auto;
+                display: inline-block;
+                color: #163686;
+                font-size: vw2(13);
+                font-style: italic;
+                font-weight: 300;
+                line-height: vw2(24);
+                margin-top: vw2(10);
+            }
+        }
     }
 
 }
@@ -900,11 +941,11 @@ body {
         color: #163686;
         font-weight: 400;
         margin-left: vw(120);
-        width: vw(1150);
+        width: vw(1130);
         @include max(sm) {
             margin-left: auto;
             margin-right: auto;
-            width: vw2(640);
+            width: vw2(580);
             text-align: center;
             font-weight: 400;
             font-size: vw2(28);
