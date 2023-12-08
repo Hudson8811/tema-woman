@@ -1875,3 +1875,16 @@ body {
 		}
 	}
 }
+.animate__fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 1750ms;
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }

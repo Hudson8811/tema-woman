@@ -1,4 +1,62 @@
 jQuery(function () { 
+    new Skroll()
+    .add(".love-spb__desc", {
+        animation: "fadeInUp",
+        delay: 200,
+        duration: 750
+    })
+    .add(".spb-slider__section", {
+        animation: "fadeInUp",
+        delay: 200,
+        duration: 750
+    })
+    .add(".rules__top", {
+        animation: "fadeInUp",
+        delay: 200,
+        duration: 750
+    })
+    .add(".rules__top", {
+        animation: "fadeInUp",
+        delay: 200,
+        duration: 750
+    })
+    .add(".rules__list", {
+        animation: "fadeInUp",
+        delay: 200,
+        duration: 750
+    })
+    .add(".rules-prisez", {
+        animation: "fadeInUp",
+        delay: 200,
+        duration: 750
+    })
+    .add(".rules-prisez", {
+        animation: "fadeInUp",
+        delay: 200,
+        duration: 750
+    })
+    .add(".promo-code", {
+        animation: "fadeInUp",
+        delay: 200,
+        duration: 750
+    })
+    .add(".promo-code__desc", {
+        animation: "fadeInUp",
+        delay: 200,
+        duration: 750
+    })
+    .add(".postcard__section", {
+        animation: "fadeInUp",
+        delay: 200,
+        duration: 750
+    })
+    .add(".gallery__section", {
+        animation: "fadeInUp",
+        delay: 200,
+        duration: 750
+    })
+
+    .init();
 
 	var clientsSlider
 	$('.js-clients__slider').each(function(){
@@ -182,6 +240,7 @@ jQuery(function () {
             $('.modal__error').text('Заполнены не все поля').show();
         }
     });
+
 
 	
 	
