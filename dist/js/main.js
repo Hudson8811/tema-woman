@@ -177,8 +177,8 @@ jQuery(function () {
                 url: '/save_user/',
                 type: 'POST',
                 data: {
-                    name: email,
-                    email: name,
+                    name: name,
+                    email: email,
                     image: image
                 },
                 beforeSend: function(xhr) {
