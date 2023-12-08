@@ -150,12 +150,17 @@ block content
 					.postcard__inter
 						.postcard__inter__title.title__48 
 							!="Напишите, за что <br> любите Санкт-Петербург"
-						form.contacts__form
+						form.contacts__form(method="POST")
 							.contacts__form__input-block
-								textarea(name="", cols="30", rows="10" ).contacts__form__textarea#js-contacts__form__textarea
+								textarea(name="", cols="30", rows="10", required="required").contacts__form__textarea#js-contacts__form__textarea
 								.contacts__form__input-block__name Я люблю Санкт-Петербург за...
 								.contacts__form__input-block__error Неправильное cообщение
-						.btn.postcard__inter__btn сохранить
+						.postcard__inter__btns.postcard__inter__btns--1
+							button.btn.postcard__inter__btn.js-send-text(type="button") сохранить
+							a.btn.btn--ligthgray.postcard__inter__btn(href="/files/rules.pdf" target="_blank") Правила конкурса
+						.postcard__inter__btns.postcard__inter__btns--2
+							a.btn.postcard__inter__btn.js-image-download(href="" download) сохранить к себе
+							a.btn.btn--gray.postcard__inter__btn(href="#registration" data-fancybox) отправить на конкурс
 
 		.section.gallery__section
 			.gallery
@@ -168,3 +173,26 @@ block content
 						img(src="img/gallery__item__2.png", alt="")
 					.gallery__item
 						img(src="img/gallery__item__3.png", alt="")
+
+	#registration.modal
+		.modal__inner
+			.modal__title Регистрация
+			form.modal__form(method="POST")
+				input.js-link-input(type="hidden" name="image" value="")
+				.modal__input
+					input(type="text" name="name" required="required")
+					span Имя
+				.modal__input
+					input(type="email" name="email" required="required")
+					span E-mail
+				.modal__agree
+					label.modal__checkbox
+						input(type="checkbox" name="agree" value="yes" required)
+						span
+					.modal__agree-text
+						| Я согласен с <a href="/files/rules.pdf" target="_blank">правилами конкурса</a>
+				.modal__btn
+					button.btn(type="submit") Отправить
+					.modal__error
+		.modal__thanks Спасибо за вашу работу! <br><br>Она появится на сайте после проверки модератором
+
