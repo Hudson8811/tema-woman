@@ -154,7 +154,7 @@ jQuery(function () {
                                 let imageLink = parsedResponse.link;
                                 $('.js-image-download').attr('href', imageLink);
                                 $('.js-link-input').val(imageLink);
-                                $('.postcard__inter__btns--1').hide();
+                                $('.postcard__inter__btns--1').remove();
                                 $('.postcard__inter__btns--2').addClass('active');
                                 $('#js-contacts__form__textarea').attr('disabled', true);
 
@@ -226,7 +226,7 @@ jQuery(function () {
                             }
                         }
                         if (!isError){
-                            $('.modal__inner').hide();
+                            $('.modal__inner').remove();
                             $('.modal__thanks').show();
                         }
                     } catch (error) {
