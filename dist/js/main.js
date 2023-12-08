@@ -163,13 +163,15 @@ jQuery(function () {
 
 	let message = document.getElementById("js-contacts__form__textarea");
 
+	var allowAjax = true;
 	$(document).on('click', '.js-send-text', function () {
 	    event.preventDefault();
 	    let btn = $(this);
         let msg = $('#js-contacts__form__textarea').val();
-        if (msg.trim() !== '') {
+        if (msg.trim() !== '' && allowAjax) {
             if (postcardSlider instanceof Swiper) {
                 let activeSlideIndex = postcardSlider.activeIndex;
+                allowAjax = false;
                 $.ajax({
                     url: '/save_collage/',
                     type: 'POST',
@@ -205,6 +207,7 @@ jQuery(function () {
                     },
                     complete: function() {
                         btn.attr('disabled', false);
+                        allowAjax = true;
                     }
                 });
             }
@@ -232,7 +235,8 @@ jQuery(function () {
         let image = $(this).find('input[name=image]').val().trim();
         let email = $(this).find('input[name=email]').val().trim();
         let name = $(this).find('input[name=name]').val().trim();
-        if (image !== '' && email !== '' && name !== ''){
+        if (image !== '' && email !== '' && name !== '' && allowAjax){
+            allowAjax = false;
             let btn = $(this).find('button[type=submit]');
             $.ajax({
                 url: '/save_user/',
@@ -269,6 +273,7 @@ jQuery(function () {
                 },
                 complete: function() {
                     btn.attr('disabled', false);
+                    allowAjax = true;
                 }
             });
         } else {
