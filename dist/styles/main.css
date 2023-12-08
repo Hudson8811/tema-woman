@@ -2521,7 +2521,7 @@ body {
   align-items: flex-start;
   width: 100%;
   min-height: 278.4375vw;
-  background-image: url(../img/main__fom--desc.png);
+  background-image: url(../img/main__fom--desc--2.png);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: contain;
@@ -3118,11 +3118,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  margin-bottom: 0.2083333333vw;
-  background: #FFF;
-  padding: 0.78125vw 1.25vw 1.25vw 1.25vw;
-  border-right: 4px solid #D8D5D2;
-  border-bottom: 4px solid #D8D5D2;
 }
 
 .postcard__slide picture,
@@ -3894,7 +3889,7 @@ body {
   }
 
   .main__section {
-    background-image: url(../img/main__fom--mob.png);
+    background-image: url(../img/main__fom--mob--2.png);
     min-height: 989.5265423242vw;
   }
 

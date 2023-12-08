@@ -462,13 +462,13 @@ body {
         align-items: flex-start;
         width: 100%;
         min-height: vw(5346);
-        background-image: url(../img/main__fom--desc.png);
+        background-image: url(../img/main__fom--desc--2.png);
         background-repeat: no-repeat;
         background-position: top center;
         background-size: contain;
         flex-flow: column nowrap;
         @include max(sm) {
-            background-image: url(../img/main__fom--mob.png);
+            background-image: url(../img/main__fom--mob--2.png);
             min-height: vw2(6897);
         }
     }
@@ -1269,11 +1269,11 @@ body {
         justify-content: center;
         align-items: center;
         height: 100%;
-        margin-bottom: vw(4);
-        background: #FFF;
-        padding: vw(15) vw(24) vw(24) vw(24);
-        border-right: 4px solid #D8D5D2;
-        border-bottom: 4px solid #D8D5D2;
+        // margin-bottom: vw(4);
+        // background: #FFF;
+        // padding: vw(15) vw(24) vw(24) vw(24);
+        // border-right: 4px solid #D8D5D2;
+        // border-bottom: 4px solid #D8D5D2;
         @include max(sm) {
             margin-bottom: 0;
             // background: #FFF;
@@ -1316,7 +1316,6 @@ body {
             padding-left: vw2(21);
             padding-right: vw2(21);
         }
-
         &__title {
             text-transform: none;
             white-space: nowrap;
