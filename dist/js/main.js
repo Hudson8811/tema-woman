@@ -130,6 +130,32 @@ jQuery(function () {
 	
 	})
 
+
+	var gallerySlider
+	$('.js-gallery__slider').each(function(){
+		var slider=$(this)
+		gallerySlider = new Swiper(slider[0], {
+			// watchOverflow: true,
+			// watchSlidesVisibility: true,
+			// watchSlidesProgress: true,
+			// preventInteractionOnTransition: true,
+			// loop: true,
+			spaceBetween: 0,
+			slidesPerView: 1,
+            breakpoints: {
+                698: {
+                  slidesPerView: 3,
+                  spaceBetween: 33
+                },
+            }
+			// navigation: {
+			// 	nextEl: ".gallery-button-next",
+			// 	prevEl: ".gallery-button-prev"
+			// },
+		});
+	
+	})
+
 	var partnersSlider
 	$('.js-partners__slider').each(function(){
 		var slider=$(this)
