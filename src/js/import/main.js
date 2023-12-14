@@ -112,11 +112,11 @@ jQuery(function () {
                   slidesPerView: 3,
                   spaceBetween: 33
                 },
-            }
-			// navigation: {
-			// 	nextEl: ".gallery-button-next",
-			// 	prevEl: ".gallery-button-prev"
-			// },
+            },
+			navigation: {
+				nextEl: ".gallery-button-next",
+				prevEl: ".gallery-button-prev"
+			},
 		});
 	
 	})

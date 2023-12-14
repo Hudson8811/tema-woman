@@ -1235,7 +1235,6 @@ body {
         justify-content: flex-start;
         align-items: flex-start;
         width: 100%;
-        overflow: hidden;
         @include max(sm) {
             width: 100%;
         }
@@ -1244,76 +1243,77 @@ body {
             display: flex;
             justify-content: center;
             align-items: flex-start;
+            overflow: hidden;
             width: 100%;
-            .swiper-buttons {
-                position: absolute;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                height: vw(100);
-                width: 100%;
-                width: vw(1105);
-                max-width: vw(1105);
-                top: calc(50% - vw(47));
-                left: vw(-130);
-                overflow: visible;
-                z-index: 15;
-                @include max(sm) {
-                    width: 100vw;
-                    max-width: 100vw;
-                    top: calc(50% - vw2(27));
-                    left: auto;
-                    height: vw2(54)
-                }
-                .swiper-button-prev,.swiper-button-next {
-                        position: relative;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        width: vw(80);
-                        height: vw(80);
-                        min-width: vw(80);
-                        min-height: vw(80);
-                        border-radius: 50%;
-                        border: 1px solid #5A6F8B;
-                        background: transparent;
-                        top: 0;
-                        @include max(sm) {
-                            width: vw2(54);
-                            height: vw2(54);
-                            min-width: vw2(54);
-                            min-height: vw2(54);        
-                        }
-                        svg {
-                                width: vw(25);
-                                min-width: vw(9.67);
-                                @include max(sm) {
-                                    width: vw2(16);
-                                    min-width: vw2(16);             
-                                }               
-                        }
-                        &::after {
-                                font-size: 0;
-                                display: none;
-                        }
-            
-            
-                }
-                .swiper-button-prev {
-                    left: 0px;
+
+        }
+        .swiper-buttons {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: vw(100);
+            width: 100%;
+            max-width:  vw(1920);
+            top: calc(50% - vw(47));
+            overflow: visible;
+            z-index: 15;
+            left: 0;
+            @include max(sm) {
+                width: 100vw;
+                max-width: calc(100vw - vw(55));
+                top: calc(50% - vw2(27));
+                left: vw2(-50);
+                height: vw2(54)
+            }
+            .swiper-button-prev,.swiper-button-next {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: vw(80);
+                    height: vw(80);
+                    min-width: vw(80);
+                    min-height: vw(80);
+                    border-radius: 50%;
+                    border: 1px solid #5A6F8B;
+                    background: transparent;
+                    top: 0;
                     @include max(sm) {
-                        left: vw2(28);
+                        width: vw2(54);
+                        height: vw2(54);
+                        min-width: vw2(54);
+                        min-height: vw2(54);        
+                    }
+                    svg {
+                            width: vw(25);
+                            min-width: vw(9.67);
+                            @include max(sm) {
+                                width: vw2(16);
+                                min-width: vw2(16);             
+                            }               
+                    }
+                    &::after {
+                            font-size: 0;
+                            display: none;
+                    }
+        
+        
+            }
+            .swiper-button-prev {
+                left: 0px;
+                @include max(sm) {
+                    left: 0;
+
+                }
+        
+            }
+            .swiper-button-next {
+                    right: 0px;
+                    @include max(sm) {
+                        right: 0;
 
                     }
-            
-                }
-                .swiper-button-next {
-                        right: 0px;
-                        @include max(sm) {
-                            right: vw2(28);
-
-                        }
-                }
             }
         }
         &__title {
